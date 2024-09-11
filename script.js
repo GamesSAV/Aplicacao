@@ -13,9 +13,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 case 0:
                     // Ação para a caixinha 1
                     //gamePreview.style.backgroundColor = 'red';
-                    saudacao.classList.add('oculto');
-                    panelGames.classList.add('oculto');
-                    gameArea.classList.remove('oculto');
+                        saudacao.classList.add('oculto');
+                        panelGames.classList.add('oculto');
+                        //fetch('../gameEmpurraCaixas/index.html').then(response => response.text()).then(data => {gameArea.innerHTML = data;}).catch(error => console.error('Erro ao carregar o conteúdo:', error));
+                        fetch('../gameEmpurraCaixas/index.html')
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error('Erro na rede: ' + response.statusText);
+                            }
+                            return response.text();
+                        })
+                        .then(data => {
+                            document.getElementById('gameArea').innerHTML = data;
+                        })
+                        .catch(error => console.error('Erro ao carregar o conteúdo:', error));
+                        document.getElementById('gameArea').classList.remove('oculto');
                     break;
                 case 1:
                     // Ação para a caixinha 2

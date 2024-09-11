@@ -1,0 +1,101 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #e0f7e9, #c8f0d8, #a0e8c5, #78e0b2, #50d8a0);
+    background-size: cover;
+    user-select: none;
+    overflow: hidden;
+    max-height: 100vh;
+}
+
+header, footer {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    max-height: 10vh;
+}
+
+main {
+    padding: 1em;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 1em;
+    border-radius: 8px;
+}
+
+section {
+    margin: 1em 0;
+}
+
+h1, h2 {
+    margin: 0.5em 0;
+}
+
+.panelGames {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 1em;
+    justify-content: center; /* Centraliza as caixinhas */
+    max-height: 72vh;
+    overflow-y: auto;
+}
+
+.gamePreview {
+    width: 100px;
+    height: 100px;
+    background-color: #4CAF50;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.game0 {
+    background-size: cover; /* Ajusta a imagem para cobrir toda a div */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-image:url('images/game0.png');
+}
+
+.gamePreview:hover {
+    background-color: #45a049;
+}
+
+.gameArea {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 1em;
+    justify-content: center; /* Centraliza as caixinhas */
+}
+
+.oculto {
+    opacity: 0;
+    height: 0;
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    header, footer {
+        padding: 0.5em 0;
+    }
+
+    main {
+        padding: 0.5em;
+    }
+
+    .gamePreview {
+        width: 80px;
+        height: 80px;
+    }
+}
