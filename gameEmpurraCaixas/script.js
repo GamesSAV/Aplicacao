@@ -532,11 +532,11 @@ function isBox(x, y) {
 }
 
 function debugPositions() {
-    let debugText = `Jogador - X: ${player.x}, Y: ${player.y}<br>`;
+    /*let debugText = `Jogador - X: ${player.x}, Y: ${player.y}<br>`;
     boxes.forEach((box, index) => {
         debugText += `Caixa ${index + 1} - X: ${box.x}, Y: ${box.y}<br>`;
     });
-    debugElement.innerHTML = debugText;
+    debugElement.innerHTML = debugText;*/
 }
 
 controls.left.addEventListener('click', () => movePlayer(-1, 0));
