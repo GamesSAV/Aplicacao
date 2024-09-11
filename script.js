@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         saudacao.classList.add('oculto');
                         panelGames.classList.add('oculto');
                         //fetch('../gameEmpurraCaixas/index.html').then(response => response.text()).then(data => {gameArea.innerHTML = data;}).catch(error => console.error('Erro ao carregar o conteúdo:', error));
-                        fetch('gameEmpurraCaixas/index.html')
+                        fetch('https://gamessav.github.io/Aplicacao/gameEmpurraCaixas/index.html')
                         .then(response => {
                             if (!response.ok) {
                                 throw new Error('Erro na rede: ' + response.statusText);
